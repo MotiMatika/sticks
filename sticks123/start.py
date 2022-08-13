@@ -6,6 +6,7 @@ print("""\nYou have to remove,
       or two
       or three sticks.
       The player who takes the last stick - LOSE""")
+
 num_of_sticks = 11
 print("\nHere we have",num_of_sticks,"sticks")
 print("\n")
@@ -19,7 +20,7 @@ if player_decision == 1:
     print("|" * res)
     print("Now the coputer is thinking....")
     computer_decision = player_decision
-    print("The computer decided to remove",computer_decision,"sticks")
+    print("The computer decided to remove",computer_decision,"stick")
     quantity = num_of_sticks-2
     print("Now we have only",quantity,"sticks") 
     print("|" * quantity)
@@ -35,34 +36,56 @@ if player_decision == 1:
     quantity = quantity-4
     print("Now we have only",quantity,"sticks") 
     print("|" * quantity) 
-#left 5 - computer wins 
-player_decision = int(input("\nHow many sticks do you want to remove ?" ))
+#11;13;left 5 - computer wins 
+
     
-elif:
-    player_decision == 2
-    res = quantity-player_decision
-        print("now we have only",res) 
-        print("|" * res)
-        print("Now the coputer is thinking....")
-        computer_decision = 2
-        print("The computer decided to remove",computer_decision,"sticks")
-        quantity = quantity-6
-        print("Now we have only",quantity,"sticks") 
-        print("|" * quantity)
-    
-if player_decision == 3:
+elif player_decision == 2:
     res = quantity-player_decision
     print("now we have only",res) 
     print("|" * res)
     print("Now the coputer is thinking....")
+    computer_decision = 2
+    print("The computer decided to remove",computer_decision,"sticks")
+    quantity = res-computer_decision
+    print("Now we have only",quantity,"sticks") 
+    print("|" * quantity)
+#11;22;left 5 - computer wins
+    
+elif player_decision == 3:
+    res = quantity-player_decision
+    print("Now we have only",res) 
+    print("|" * res)
+    print("Now the coputer is thinking....")
     computer_decision = 1
     print("The computer decided to remove",computer_decision,"sticks")
-    quantity = quantity-6
-    print("Now we have only",quantity,"sticks") 
+    quantity = res-computer_decision
+    print("Now we have only",quantity,"stick") 
     print("|" * quantity)      
+#11;31;left 5 - computer wins    
+player_decision = int(input("\nHow many sticks do you want to remove ?" ))
+if player_decision == 1:
+    print("Now we have only",5-player_decision)
+    print("|" * (5-player_decision)) 
+    print("Now the coputer is thinking....")
+    computer_decision = 3
+    print("The computer decided to remove",computer_decision,"sticks")
+    print("\nC O M P U T E R    W O N !!!")
     
-    
-    
+elif player_decision == 2:
+    print("Now we have only",5-player_decision)
+    print("|" * (5-player_decision)) 
+    print("Now the coputer is thinking....")
+    computer_decision = 2
+    print("The computer decided to remove",computer_decision,"sticks")
+    print("\nC O M P U T E R    W O N !!!")    
+ 
+elif player_decision == 3:
+    print("Now we have only",5-player_decision)
+    print("|" * (5-player_decision)) 
+    print("Now the coputer is thinking....")
+    computer_decision = 1
+    print("The computer decided to remove",computer_decision,"stick")
+    print("\nC O M P U T E R    W O N !!!")    
     
     
     
