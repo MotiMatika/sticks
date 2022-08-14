@@ -21,7 +21,7 @@ if player_decision == 1:
     print("Now the coputer is thinking....")
     computer_decision = player_decision
     print("The computer decided to remove",computer_decision,"stick")
-    quantity = num_of_sticks-2
+    quantity = num_of_sticks-(player_decision+computer_decision)
     print("Now we have only",quantity,"sticks") 
     print("|" * quantity)
 #left 9    
@@ -33,7 +33,7 @@ if player_decision == 1:
         print("Now the coputer is thinking....")
         computer_decision = 3
         print("The computer decided to remove",computer_decision,"sticks")
-        quantity = quantity-4
+        quantity = quantity- (player_decision+computer_decision)
         print("Now we have only",quantity,"sticks") 
         print("|" * quantity) 
 #11;13;left 5 - computer wins 
@@ -43,10 +43,11 @@ if player_decision == 1:
         res = quantity-player_decision
         print("now we have only",res) 
         print("|" * res)
+        #7 left
         print("Now the coputer is thinking....")
         computer_decision = 2
         print("The computer decided to remove",computer_decision,"sticks")
-        quantity = res-computer_decision
+        quantity = quantity- (player_decision+computer_decision)
         print("Now we have only",quantity,"sticks") 
         print("|" * quantity)
 #11;22;left 5 - computer wins
@@ -58,7 +59,7 @@ if player_decision == 1:
         print("Now the coputer is thinking....")
         computer_decision = 1
         print("The computer decided to remove",computer_decision,"sticks")
-        quantity = res-computer_decision
+        quantity = quantity- (player_decision+computer_decision)
         print("Now we have only",quantity,"stick") 
         print("|" * quantity)      
 #11;31;5 left  - computer wins    
@@ -87,7 +88,7 @@ if player_decision == 1:
         print("The computer decided to remove",computer_decision,"stick")
         print("\nC O M P U T E R    W O N !!!")    
      
-    
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   
 
 #player 2 coputer 1
 elif player_decision == 2:
@@ -95,12 +96,12 @@ elif player_decision == 2:
     print("now we have only",res) 
     print("|" * res)
     print("Now the coputer is thinking....")
-    computer_decision = player_decision-1
+    computer_decision = 1
     print("The computer decided to remove",computer_decision,"stick")
     quantity = num_of_sticks-(player_decision+computer_decision)
     print("Now we have only",quantity,"sticks") 
     print("|" * quantity) 
-    #8 left  
+    #8 left  @@@@@@@@@@@@@@@
     player_decision = int(input("\nHow many sticks do you want to remove ?" ))
     if player_decision == 1:
         print("Now we have only",quantity,"sticks")
@@ -117,7 +118,7 @@ elif player_decision == 2:
             computer_decision = 3
             print("The computer decided to remove",computer_decision,"sticks")
             print("\nC O M P U T E R    W O N !!!")
-    
+    #@@@@@@@@@@@@@@@@@@
         elif player_decision == 2:
             print("Now we have only",5-player_decision)
             print("|" * (5-player_decision)) 
@@ -125,7 +126,7 @@ elif player_decision == 2:
             computer_decision = 2
             print("The computer decided to remove",computer_decision,"sticks")
             print("\nC O M P U T E R    W O N !!!")
-         
+         #@@@@@@@@@@@@@@@@@@
         elif player_decision == 3:
             print("Now we have only",5-player_decision)
             print("|" * (5-player_decision)) 
@@ -166,95 +167,70 @@ elif player_decision == 2:
             computer_decision = 1
             print("The computer decided to remove",computer_decision,"stick")
             print("\nC O M P U T E R    W O N !!!")
+            #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 #2;1 3;1             
     if player_decision == 3:
-        print("Now we have only",quantity,"sticks")
-        print("|" * (quantity)) 
+        print("Now we have only 5 sticks")
+        print("|" * (5)) 
+        print("Now the coputer is thinking....")
+        if computer_decision == 1:
+            print("The computer decided to remove",computer_decision,"stick")
+            print("Now we have only 4 sticks")
+            print("|" * (4)) 
+            player_decision = int(input("\nHow many sticks do you want to remove ?" ))
+            if player_decision == 3:
+                print("You W O N")
+                
+        elif computer_decision == 2:
+            print("The computer decided to remove",computer_decision,"sticks")
+            print("Now we have only 3 sticks")
+            print("|" * (3))  
+            player_decision = int(input("\nHow many sticks do you want to remove ?" ))
+            if player_decision == 2:
+                print("You W O N")
+        elif computer_decision == 3:
+            print("The computer decided to remove",computer_decision,"sticks")
+            print("Now we have only 2 sticks")
+            print("|" * (2)) 
+            player_decision = int(input("\nHow many sticks do you want to remove ?" ))
+            if player_decision == 1:
+                print("You W O N")
+            
+    
+if player_decision == 3:
+    print("Now we have only 8 sticks")
+    print("|" * (8)) 
+    print("Now the coputer is thinking....")
+    computer_decision = 3
+    print("The computer decided to remove",computer_decision,"sticks")
+    print("Now we have only 5 sticks")
+    print("|" * (5))
+    player_decision = int(input("\nHow many sticks do you want to remove ?" ))
+    if player_decision == 1:
+        print("Now we have only",5-player_decision,"sticks")
+        print("|" * (5-player_decision)) 
+        print("Now the coputer is thinking....")
+        computer_decision = 3
+        print("The computer decided to remove",computer_decision,"sticks")
+        print("\nC O M P U T E R    W O N !!!")
+    
+    elif player_decision == 2:
+        print("Now we have only",5-player_decision,"sticks")
+        print("|" * (5-player_decision)) 
+        print("Now the coputer is thinking....")
+        computer_decision = 2
+        print("The computer decided to remove",computer_decision,"sticks")
+        print("\nC O M P U T E R    W O N !!!")
+         
+    elif player_decision == 3:
+        print("Now we have only",5-player_decision,"stick")
+        print("|" * (5-player_decision)) 
         print("Now the coputer is thinking....")
         computer_decision = 1
         print("The computer decided to remove",computer_decision,"stick")
-            #7 left
-        if player_decision == 1:
-            print("Now we have only",5-player_decision)
-            print("|" * (5-player_decision)) 
-            print("Now the coputer is thinking....")
-            computer_decision = 1
-            print("The computer decided to remove",computer_decision,"stick")
-            player_decision = int(input("\nHow many sticks do you want to remove ?" ))
-            #5 left
-        if player_decision == 1:
-            print("Now we have only",5-player_decision)
-            print("|" * (5-player_decision)) 
-            print("Now the coputer is thinking....")
-            computer_decision = 3
-            print("The computer decided to remove",computer_decision,"sticks")
-            print("\nC O M P U T E R    W O N !!!")
-    
-        elif player_decision == 2:
-            print("Now we have only",5-player_decision)
-            print("|" * (5-player_decision)) 
-            print("Now the coputer is thinking....")
-            computer_decision = 2
-            print("The computer decided to remove",computer_decision,"sticks")
-            print("\nC O M P U T E R    W O N !!!")
-         
-        elif player_decision == 3:
-            print("Now we have only",5-player_decision)
-            print("|" * (5-player_decision)) 
-            print("Now the coputer is thinking....")
-            computer_decision = 1
-            print("The computer decided to remove",computer_decision,"stick")
-            print("\nC O M P U T E R    W O N !!!")
-    
-#2;1 3;2             
-    if player_decision == 3:
-        print("Now we have only",quantity,"sticks")
-        print("|" * (quantity)) 
-        print("Now the coputer is thinking....")
-        computer_decision = 1
-        print("The computer decided to remove",computer_decision,"sticks")        
-        player_decision = int(input("\nHow many sticks do you want to remove ?" ))
-
-
-
-        if player_decision == 1:
-            print("Now we have only",5-player_decision)
-            print("|" * (5-player_decision)) 
-            print("Now the coputer is thinking....")
-            computer_decision = 3
-            print("The computer decided to remove",computer_decision,"sticks")
-            print("\nC O M P U T E R    W O N !!!")
-    
-        elif player_decision == 2:
-            print("Now we have only",5-player_decision)
-            print("|" * (5-player_decision)) 
-            print("Now the coputer is thinking....")
-            computer_decision = 2
-            print("The computer decided to remove",computer_decision,"sticks")
-            print("\nC O M P U T E R    W O N !!!")
-         
-        elif player_decision == 3:
-            print("Now we have only",5-player_decision)
-            print("|" * (5-player_decision)) 
-            print("Now the coputer is thinking....")
-            computer_decision = 1
-            print("The computer decided to remove",computer_decision,"stick")
-            print("\nC O M P U T E R    W O N !!!")
+        print("\nC O M P U T E R    W O N !!!")
             
-        if player_decision == 2:
-            print("Now we have only",5-player_decision)
-            print("|" * (5-player_decision)) 
-            print("Now the coputer is thinking....")
-            computer_decision = 2
-            print("The computer decided to remove",computer_decision,"sticks")
-            print("\nC O M P U T E R    W O N !!!")
-        if player_decision == 3:
-            print("Now we have only",5-player_decision)
-            print("|" * (5-player_decision)) 
-            print("Now the coputer is thinking....")
-            computer_decision = 1
-            print("The computer decided to remove",computer_decision,"sticks")
-            print("\nC O M P U T E R    W O N !!!")
+      
                 
 
 
