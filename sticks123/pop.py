@@ -1,6 +1,10 @@
 print("\nS T I C K S")
 
+<<<<<<< HEAD
 print("\n|  |  |  |  |  |  |  |  |  |  |")
+=======
+print("\n| | | | | | | | | | |")
+>>>>>>> a2532b346ac65bec24716dcb3bc2805d2a4e29f3
 print("""\nYou have to remove,
       one,
       or two
@@ -10,6 +14,7 @@ print("""\nYou have to remove,
 num_of_sticks = 11
 print("\nHere we have",num_of_sticks,"sticks")
 print("\n")
+<<<<<<< HEAD
 line = [1,2,3,4,5,6,5,5,5,5,5]
 
 #111
@@ -268,3 +273,10 @@ elif  player_decision == 3:
     
     
     
+=======
+print("|" * (num_of_sticks))
+
+list = ["| | | | | | | | | | |"]
+list = list.pop(0)
+print(list)
+>>>>>>> a2532b346ac65bec24716dcb3bc2805d2a4e29f3
