@@ -12,6 +12,7 @@ print("\nHere we have",num_of_sticks,"sticks")
 print("\n")
 print("|" * (num_of_sticks))
 
+
 player1_decision = int(input("\nPlayer1,how many sticks do you want to remove ?" ))
 if player1_decision == 1:
     res1 = num_of_sticks-player1_decision
