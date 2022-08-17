@@ -8,13 +8,14 @@ print("""\nYou have to remove,
       or three sticks.
       The player who takes the last stick - LOSE""")
 
+player_name = "Tomer"
 num_of_sticks = 11
 print("\nHere we have",num_of_sticks,"sticks")
 print("\n")
-line = [1,2,3,4,5,6,5,5,5,5,5]
+line = [1,2,3,4,5,6,7,8,9,10,11]
 
 #111
-player_decision = int(input("\nPlayer,how many sticks do you want to remove ?" ))
+player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ?" ))
 if player_decision == 1:
     num_of_sticks = num_of_sticks-player_decision
     del line[0]
@@ -84,6 +85,7 @@ if player_decision == 1:
         print(line)
         print("COMPUTER WON !!! ")
     #E
+    
     elif player_decision == 2:
         num_of_sticks = 5-player_decision
         del line[0:2]
