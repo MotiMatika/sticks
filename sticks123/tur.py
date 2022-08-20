@@ -68,7 +68,8 @@ moti.fd(120)
 #     moti.fd(120)
 #     moti.rt(120)
 #     moti.fd(120)        
-#     moti.lt(30)               
+#     moti.lt(30) 
+              
 # def main():    
 #     sq()
 #     for i in range(1,5):
