@@ -1,6 +1,3 @@
-from operator import le
-
-
 def oppenning():
     print("\nS T I C K S")
 
