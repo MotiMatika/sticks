@@ -162,7 +162,7 @@ def from_15_to_9(computer_name):
 def start(player_name,computer_name):
     player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
     if player_decision == 1:
-        from_15_to_13(player_name)
+        from_15_to_13(computer_name)
         from_13_to_9(player_name,computer_name)
         from_9_to_5(player_name,computer_name)
         from_5_to_1(player_name,computer_name)  
@@ -178,10 +178,7 @@ def main():
     player_name   = "Dror"
     computer_name = "Moti"
     start(player_name,computer_name)
-    # from_15_to_13(computer_name)
-    # from_13_to_9(player_name,computer_name)
-    # from_9_to_5(player_name,computer_name)
-    # from_5_to_1(player_name,computer_name)  
+      
 
 if __name__ == "__main__":
    main() 
