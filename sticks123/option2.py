@@ -134,14 +134,23 @@ if pick_sticks == 1:
         print(line)
         from_9_to_5(player_name,computer_name)
         from_5_to_1(player_name,computer_name)
+    elif player_decision == 3:
+        pass
+    #kan rd....
+    #lizor fun lekol color yellow green pink
+    
+    
+    
+    
+    
 #if pick_sticks == 2:
-    num_of_sticks = length-pick_sticks
-    print("Now we have",num_of_sticks,"sticks")
-    for i in range (pick_sticks):
-        line.pop()
-    print(line)
-    player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
-    if player_decision == 1:
+    # num_of_sticks = length-pick_sticks
+    # print("Now we have",num_of_sticks,"sticks")
+    # for i in range (pick_sticks):
+    #     line.pop()
+    # print(line)
+    # player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
+    # if player_decision == 1:
         num_of_sticks = 13-pick_sticks - player_decision
         print("Now we have",num_of_sticks,"sticks")
         for i in range (player_decision):
