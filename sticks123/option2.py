@@ -87,7 +87,7 @@ def from_5_to_1(player_name,computer_name):
         print(line)
         print(computer_name," W O N !!!")
         print("       END of GAME") 
-#def delete_sticks(length):
+
     
 
 #def from_13_to_rrrr(player_name,computer_name):
