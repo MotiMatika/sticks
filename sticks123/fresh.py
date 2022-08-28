@@ -12,44 +12,40 @@ def oppenning(line):
     
     print("\n"+"This is the line of the sticks")
     print("\n",line)
-    return line
+    
 def type_player(player_decision,line):#מכילה הוראות צמצום רשימה והדפסתה עבור השחקן
     for i in range (player_decision):
         line.pop()
-    print(line) 
+    print(line)
+    return line 
+    
 def from_14_to_13(player_decision,line):
     print("\n"+"This is the new line of the sticks")
-    type_player(player_decision,line)
-    num_of_sticks = 14
-    
-    return num_of_sticks,line 
-def Rand_Com(num_of_sticks,computer_name,compuer_decision,line):
+    line = type_player(player_decision,line)
+    return line 
+
+def Rand_Com(num_of_sticks,computer_name,computer_decision,line):
     num_of_sticks = num_of_sticks - computer_decision
     print("\n",computer_name, "decided to remove",computer_decision)
     print("Now we have",num_of_sticks,"sticks")
     type_computer(computer_decision,line)
-def from_13_to_9(computer_name,nume_of_sticks,line):
+
+def from_13_to_9(computer_name,line):
     computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-    num_of_sticks = num_of_sticks - computer_decision
+    num_of_sticks = len(line) - computer_decision
     print("Now we have",num_of_sticks,"sticks")
-    for i in range (computer_decision):
-        line.pop()
-    print(line)
-
-
-
+    line = type_player(computer_decision,line)
+    return line
 def main():
          #השמות בסיסיות
     player_name   = "Dror"
     computer_name = "Moti"
     line = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]    
     oppenning(line)
-    
     player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
     if player_decision == 1:       #נותרו 14
-        from_14_to_13(player_decision,line)
-        
-        from_13_to_9(computer_name,line)
+        line = from_14_to_13(player_decision,line)
+        line = from_13_to_9(computer_name,line)
         
         #line=Rand_Com(13,computer_name,rd.randint(1,3),line)     
 
@@ -171,7 +167,7 @@ if __name__ == "__main__":
 #             line.pop()
 #         print(line)
     
-# def from_9_to_5(player_name,computer_name):
+#def from_9_to_5(player_name,computer_name):
 #     line = [1,2,3,4,5,6,7,8,9]
 #     num_of_sticks = len(line)
 #     player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
