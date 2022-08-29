@@ -1,5 +1,5 @@
 import random as rd
-def oppenning(line):
+def openning(line):
     print("\nS T I C K S")
 
     print("\n|  |  |  |  |  |  |  |  |  |  |")
@@ -36,19 +36,18 @@ def from_13_to_9(computer_name,line):
     print("Now we have",num_of_sticks,"sticks")
     line = type_player(computer_decision,line)
     return line
+
+
 def main():
          #השמות בסיסיות
     player_name   = "Dror"
     computer_name = "Moti"
     line = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]    
-    oppenning(line)
+    openning(line)
     player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
     if player_decision == 1:       #נותרו 14
         line = from_14_to_13(player_decision,line)
-        line = from_13_to_9(computer_name,line)
-        
-        #line=Rand_Com(13,computer_name,rd.randint(1,3),line)     
-
+        line = from_13_to_9(computer_name,line)   
 if __name__ == "__main__":
         main() 
     
