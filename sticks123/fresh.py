@@ -36,6 +36,7 @@ def from_13_to_9(computer_name,line):
     print("Now we have",num_of_sticks,"sticks")
     line = type_player(computer_decision,line)
     return line
+
 def main():
          #השמות בסיסיות
     player_name   = "Dror"
