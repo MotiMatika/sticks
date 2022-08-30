@@ -26,18 +26,26 @@ def type_computer(computer_decision,line):#מכילה הוראות צמצום ר
     return line 
    
 def from_15_to_13_win(player_decision,computer_name,line):
-    print("\n"+"This is the new line of the sticks")
-    line = type_player(player_decision,line)
+    print("\n"+"This is the new line of the sticks")    #14 long
+    line = type_player(player_decision,line)            #14 long
     computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-    if computer_decision == 1:
-        type_computer(computer_decision,line)
+    if computer_decision == 1:                          #13 long
+        type_computer(computer_decision,line)           #13 long
     return line #13 long
 
+def from_15_to_13_lose(player_decision,computer_name,line):
+    print("\n"+"This is the new line of the sticks")    #13 long
+    line = type_player(player_decision,line)            #13 long
+    # computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+    # if computer_decision == 1:                          #12 long
+    #     type_computer(computer_decision,line)
+    # return line                                         #12 long
+
 #def Rand_Com(num_of_sticks,computer_name,computer_decision,line):
-    num_of_sticks = num_of_sticks - computer_decision
-    print("\n",computer_name, "decided to remove",computer_decision)
-    print("Now we have",num_of_sticks,"sticks")
-    type_computer(computer_decision,line)
+    # num_of_sticks = num_of_sticks - computer_decision
+    # print("\n",computer_name, "decided to remove",computer_decision)
+    # print("Now we have",num_of_sticks,"sticks")
+    # type_computer(computer_decision,line)
 
 def victory_computer(player_decision,computer_name,line):
         num_of_sticks = len(line) - player_decision
@@ -71,9 +79,9 @@ def from_13_to_9_win(player_name,computer_name,line):
 
 def from_13_to_9_lose(computer_name,player_name,line):
         computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-        if computer_decision == 1:
+        if computer_decision == 1:#12 long
             victory_player(computer_decision,player_name,line)
-            return line #9 long
+            return line 
         if computer_decision == 2:
             victory_player(computer_decision,player_name,line)
             return line #13 long
@@ -84,13 +92,13 @@ def from_13_to_9_lose(computer_name,player_name,line):
 def from_9_to_5_win(player_name,computer_name,line):
     player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
     if player_decision == 1:
-        victory(player_decision,computer_name,line)
+        victory_computer(player_decision,computer_name,line)
         return line #8 long
     if player_decision == 2:
-        victory(player_decision,computer_name,line)
+        victory_computer(player_decision,computer_name,line)
         return line #7 long
     if player_decision == 3:
-        victory(player_decision,computer_name,line)
+        victory_computer(player_decision,computer_name,line)
         return line #6 long    
     
     
@@ -117,19 +125,19 @@ def from_5_to_1_win(player_name,computer_name,line):
     
     player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
     if player_decision == 1:
-        victory(player_decision,computer_name,line)
+        victory_computer(player_decision,computer_name,line)
         print(computer_name," W O N !!!")
-        print("       END of GAME")
+        print("\n"+"******* END of GAME *******")
         return line
     if player_decision == 2:
-        victory(player_decision,computer_name,line)
+        victory_computer(player_decision,computer_name,line)
         print(computer_name," W O N !!!")
-        print("       END of GAME")
+        print("\n"+"******* END of GAME *******")
         return line
     if player_decision == 3:
-        victory(player_decision,computer_name,line)
+        victory_computer(player_decision,computer_name,line)
         print(computer_name," W O N !!!")
-        print("       END of GAME")
+        print("\n"+"******* END of GAME *******")
         return line
 
 def from_15_to_9_win(player_decision,computer_name,line):
@@ -157,8 +165,9 @@ def main():
         line = from_9_to_5_win(player_name,computer_name,line)
         from_5_to_1_win(player_name,computer_name,line)
     if player_decision == 2:
+        line = from_15_to_13_lose(player_decision,computer_name,line)
         line = from_13_to_9_lose(computer_name,player_name,line)
-        line = from_9_to_5_win(computer_name,player_name,line)
+        #line = from_9_to_5_lose(computer_name,player_name,line)
 
 
     if player_decision == 3:    #נותרו 12
