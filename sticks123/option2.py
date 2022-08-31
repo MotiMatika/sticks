@@ -1,96 +1,98 @@
-import random as rd
-player_name   = "Dror"
-computer_name = "Moti"
-# פונקציות רלוונטיות לשימוש
-def from_9_to_5(player_name,computer_name):#משופרת
-    line = [1,2,3,4,5,6,7,8,9]
-    num_of_sticks = len(line)
-    player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
-    if player_decision == 1:
-        num_of_sticks = num_of_sticks - player_decision
-        print("Now we have",num_of_sticks,"sticks")
-        for i in range (player_decision):
-            line.pop()
-        print(line)
-        computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-        num_of_sticks = num_of_sticks - computer_decision
-        print("Now we have",num_of_sticks,"sticks")
-        for i in range (computer_decision):
-            line.pop()
-        print(line)
-        from_5_to_1
-    if player_decision == 2:
-        num_of_sticks = num_of_sticks - player_decision
-        print("Now we have",num_of_sticks,"sticks")
-        for i in range (player_decision):
-            line.pop()
-        print(line)
-        computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-        num_of_sticks = num_of_sticks - computer_decision
-        print("Now we have",num_of_sticks,"sticks")
-        for i in range (computer_decision):
-            line.pop()
-        print(line)
-        from_5_to_1
-    if player_decision == 3:
-        num_of_sticks = num_of_sticks - player_decision
-        print("Now we have",num_of_sticks,"sticks")
-        for i in range (player_decision):
-            line.pop()
-        print(line)
-        computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-        num_of_sticks = num_of_sticks - computer_decision
-        print("Now we have",num_of_sticks,"stick")
-        for i in range (1):
-            line.pop()
-        print(line)
-        from_5_to_1
-def from_5_to_1(player_name,computer_name):
-    line = [1,2,3,4,5]
-    num_of_sticks = len(line)
-    player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
-    if player_decision == 1:
-        num_of_sticks = num_of_sticks - 1
-        print("Now we have",num_of_sticks,"sticks")
-        for i in range (1):
-            line.pop()
-        print(line)
-        computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-        num_of_sticks = num_of_sticks - computer_decision
-        print("Now we have",num_of_sticks,"stick")
-        for i in range (3):
-            line.pop()
-        print(line)
-        print(computer_name," W O N !!!")
-        print("       END of GAME")
-    if player_decision == 2:
-        num_of_sticks = num_of_sticks - 2
-        print("Now we have",num_of_sticks,"sticks")
-        for i in range (2):
-            line.pop()
-        print(line)
-        computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-        num_of_sticks = num_of_sticks - computer_decision
-        print("Now we have",num_of_sticks,"stick")
-        for i in range (2):
-            line.pop()
-        print(line)
-        print(computer_name," W O N !!!")
-        print("       END of GAME")
-    if player_decision == 3:
-        num_of_sticks = num_of_sticks - 3
-        print("Now we have",num_of_sticks,"sticks")
-        for i in range (3):
-            line.pop()
-        print(line)
-        computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-        num_of_sticks = num_of_sticks - computer_decision
-        print("Now we have",num_of_sticks,"stick")
-        for i in range (1):
-            line.pop()
-        print(line)
-        print(computer_name," W O N !!!")
-        print("       END of GAME") 
+# import random as rd
+# player_name   = "Dror"
+# computer_name = "Moti"
+# # פונקציות רלוונטיות לשימוש
+#  def from_9_to_5(player_name,computer_name):#משופרת
+# #     line = [1,2,3,4,5,6,7,8,9]
+# #     num_of_sticks = len(line)
+# #     player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
+# #     if player_decision == 1:
+# #         num_of_sticks = num_of_sticks - player_decision
+# #         print("Now we have",num_of_sticks,"sticks")
+# #         for i in range (player_decision):
+# #             line.pop()
+# #         print(line)
+#         computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+#         num_of_sticks = num_of_sticks - computer_decision
+#         print("Now we have",num_of_sticks,"sticks")
+#         for i in range (computer_decision):
+#             line.pop()
+#         print(line)
+#         from_5_to_1
+#     if player_decision == 2:
+#         num_of_sticks = num_of_sticks - player_decision
+#         print("Now we have",num_of_sticks,"sticks")
+#         for i in range (player_decision):
+#             line.pop()
+#         print(line)
+#         computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+#         num_of_sticks = num_of_sticks - computer_decision
+#         print("Now we have",num_of_sticks,"sticks")
+#         for i in range (computer_decision):
+#             line.pop()
+#         print(line)
+#         from_5_to_1
+#     if player_decision == 3:
+#         num_of_sticks = num_of_sticks - player_decision
+#         print("Now we have",num_of_sticks,"sticks")
+#         for i in range (player_decision):
+#             line.pop()
+#         print(line)
+#         computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+#         num_of_sticks = num_of_sticks - computer_decision
+#         print("Now we have",num_of_sticks,"stick")
+#         for i in range (1):
+#             line.pop()
+#         print(line)
+#         from_5_to_1
+# def from_5_to_1(player_name,computer_name):
+#     line = [1,2,3,4,5]
+#     num_of_sticks = len(line)
+#     player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
+#     if player_decision == 1:
+#         num_of_sticks = num_of_sticks - 1
+#         print("Now we have",num_of_sticks,"sticks")
+#         for i in range (1):
+#             line.pop()
+#         print(line)
+#         computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+#         num_of_sticks = num_of_sticks - computer_decision
+#         print("Now we have",num_of_sticks,"stick")
+#         for i in range (3):
+#             line.pop()
+#         print(line)
+#         print(computer_name," W O N !!!")
+#         print("       END of GAME")
+#     if player_decision == 2:
+#         num_of_sticks = num_of_sticks - 2
+#         print("Now we have",num_of_sticks,"sticks")
+#         for i in range (2):
+#             line.pop()
+#         print(line)
+#         computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+#         num_of_sticks = num_of_sticks - computer_decision
+#         print("Now we have",num_of_sticks,"stick")
+#         for i in range (2):
+#             line.pop()
+#         print(line)
+#         print(computer_name," W O N !!!")
+#         print("       END of GAME")
+#     if player_decision == 3:
+#         num_of_sticks = num_of_sticks - 3
+#         print("Now we have",num_of_sticks,"sticks")
+#         for i in range (3):
+#             line.pop()
+#         print(line)
+#         computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+#         num_of_sticks = num_of_sticks - computer_decision
+#         print("Now we have",num_of_sticks,"stick")
+#         for i in range (1):
+#             line.pop()
+#         print(line)
+#         print(computer_name," W O N !!!")
+#         print("       END of GAME") 
+
+
 def DROR_win_9(player_name,computer_name):
     print("\n",computer_name, "decided to remove",rd.randint(1,3))
     num_of_sticks = num_of_sticks - player_decision
