@@ -34,16 +34,31 @@ def victory_computer(player_decision,computer_name,line):
         print("Now we have",num_of_sticks,"sticks")
         type_computer(computer_decision,line)
 
-def victory_player(computer_decision,player_name,line):
-        num_of_sticks = len(line) - computer_decision
-        print("Now we have",num_of_sticks,"sticks")
-        line = type_computer(computer_decision,line) #12 long
+def player_decision(player_name,line):
+    player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
+    num_of_sticks = len(line) - player_decision
+    print("Now we have",num_of_sticks,"sticks")
+    line = type_player(player_decision,line)
+    return line
+
+def computer_decision(computer_name,line):
+    player_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+    num_of_sticks = len(line) - computer_decision
+    print("Now we have",num_of_sticks,"sticks")
+    line = type_computer(computer_decision,line)
+    return line
+
+def victory_player(computer_decision,player_name,computer_name,line):
         player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
+        num_of_sticks = len(line) - player_decision
+        print("Now we have",num_of_sticks,"sticks")
+        line = type_computer(computer_decision,line) 
+        computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
         num_of_sticks = num_of_sticks - player_decision
         print("Now we have",num_of_sticks,"sticks")
         type_player(player_decision,line) 
 
-def lose_computer(computer_decision,line):
+#def lose_computer(computer_decision,line):
         num_of_sticks = len(line) - computer_decision
         print("Now we have",num_of_sticks,"sticks")
         line = type_computer(computer_decision,line) 
@@ -61,8 +76,8 @@ def from_15_to_13_win(player_decision,computer_name,line):
         type_computer(computer_decision,line)           #13 long
     return line #13 long
 
-def from_15_to_13_lose(player_decision,line):               #good
-    print("\n"+"This is the new line of the sticks")    #13 long
+#def from_15_to_13_lose(player_decision,line):               #good
+    print("\n"+"This is the new line of the sticksאא")    #13 long
     line = type_player(player_decision,line) 
     return line                                         #13 long   
 
@@ -78,7 +93,7 @@ def from_13_to_9_win(player_name,computer_name,line):       #good
         victory_computer(player_decision,computer_name,line)
         return line #9 long
 
-def from_13_to_9_lose(computer_name,line):  #not good
+#def from_13_to_9_lose(computer_name,player_name,line):  #not good
         #print("\n"+"This is the new line of the sticks")    #13 long
         #line = type_player(player_decision,line)            #13 long  
         computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
@@ -170,9 +185,11 @@ def main():
         line = from_13_to_9_win(player_name,computer_name,line)
         line = from_9_to_5_win(player_name,computer_name,line)
         from_5_to_1_win(player_name,computer_name,line)
-    if player_decision == 2:        #נותרו 13
-        line = from_15_to_13_lose(player_decision,line)#good נותרו 13
-        line = from_13_to_9_lose(computer_name,line)
+    #if player_decision == 2:        #נותרו 13
+        victory_computer(player_decision,computer_name,line)
+        victory_player(player_decision,player_name,line)
+       #line = from_15_to_13_lose(player_decision,line)#good נותרו 13
+        # line = from_13_to_9_lose(computer_name,line)
         
     if player_decision == 3:        #good נותרו 12
         line = from_15_to_9_win(player_decision,computer_name,line)

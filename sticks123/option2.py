@@ -115,7 +115,7 @@ def DROR_win_9(player_name,computer_name):
         print(line)
         print(player_name,"W O N !!!")
 def DROR_win_5(player_name,computer_name) :       
-#def RD_1(player_name,computer_name):
+def RD_1(player_name,computer_name):
     player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
     if player_decision == 1:#EE
         print("Now we have",num_of_sticks,"sticks")
