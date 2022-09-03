@@ -191,8 +191,7 @@ def main():
                 computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
                 c_1(computer_decision,line)#1 long
                 print(computer_name,"  W  I  N !!!")        
-            
-                
+               
                 
                 
                 
