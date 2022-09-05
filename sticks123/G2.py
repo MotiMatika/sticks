@@ -225,9 +225,9 @@ def main():
     if   player_decision == 1:              #15-->14 
         line = vc_15_14_13(player_decision,computer_name,line)
         line = from_13_to_victory(computer_name,player_name,line)       
-    if   player_decision == 2:
+    if   player_decision == 2:              #15-->13
         pass
-    if   player_decision == 3:
+    if   player_decision == 3:              #15-->12
         from_15_to_victory(computer_name,player_name,player_decision,line)  
  
                    
