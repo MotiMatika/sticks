@@ -1,3 +1,4 @@
+import random as rd
 def p_1(player_decision,line):#שחקן מוחק מקל בודד
     print("\n"+"This is the new line of the sticks")
     for i in range (player_decision):
@@ -225,8 +226,38 @@ def main():
     if   player_decision == 1:              #15-->14 
         line = vc_15_14_13(player_decision,computer_name,line)
         line = from_13_to_victory(computer_name,player_name,line)       
+######################################################################################    
+    
+    
     if   player_decision == 2:              #15-->13
-        pass
+        p_2(player_decision,line)
+        print("\n" + computer_name + ",how many sticks do you want to remove ? " )
+        computer_decision = rd.randint(1,3)
+        print(computer_decision)
+        if computer_decision == 1:
+           c_1(computer_decision,line)
+        elif computer_decision == 2:
+            c_2(computer_decision,line)
+        elif computer_decision == 3:
+            c_3(computer_decision,line)     
+        player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
+        if player_decision == 1:
+           p_1(player_decision,line)
+        elif player_decision == 2:
+            p_2(player_decision,line)
+        elif player_decision == 3:
+            p_3(player_decision,line)
+        computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+        if computer_decision == 1:
+           c_1(computer_decision,line)
+        elif computer_decision == 2:
+            c_2(computer_decision,line)
+        elif computer_decision == 3:
+            c_3(computer_decision,line)
+    #להוסיף מה קורה לאחר התגובה שלה לאקראיות שלי
+    
+    
+##########################################################################################    
     if   player_decision == 3:              #15-->12
         from_15_to_victory(computer_name,player_name,player_decision,line)  
  
