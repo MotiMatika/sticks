@@ -382,69 +382,120 @@ def main():
                             if   player_decision == 1:#6 long
                                 p_1(player_decision,line)
                                 computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-                                c_1(computer_decision,line)#5 long
-מכאן ניצחון של המחשב = מהלך החל מ 5
-
-
-
-
-
-
-
-
-
-
-                    elif player_decision == 2:          #8 long
-                        p_2(player_decision,line)
-                        computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-                        if computer_decision == 1:
-                            c_1(computer_decision,line) #7 long
-                            player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
-                            if player_decision == 1:    #6 long
-                                p_1(player_decision,line)
-                                computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-                                if computer_decision   == 1:   #5 long
-                                    c_1(computer_decision,line)
+                                if computer_decision == 1:
+                                    c_1(computer_decision,line)#5 long
                                     player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
-                                    if player_decision == 1:
-                                        vc_5_4_1(player_decision,computer_name,line)
+                                    if   player_decision == 1:# 4 long
+                                        def vc_5_4_1(player_decision,computer_name,line):                          
                                     elif player_decision == 2:
-                                        vc_5_3_1(player_decision,computer_name,line)
+                                        def vc_5_3_1(player_decision,computer_name,line):
                                     elif player_decision == 3:
-                                        vc_5_2_1(player_decision,computer_name,line)
-                                elif computer_decision == 2:   #4 long
-                                    player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
-                                    if player_decision == 1:#3 long
-                                        p_1(player_decision,line)
+                                        def vc_5_2_1(player_decision,computer_name,line): 
+                                        p_2(player_decision,line)           #5-->3
                                         computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-                                        if computer_decision == 1:#2 long
-                                            c_2(computer_decision,line)
-                                            player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
-                                            if player_decision == 1:
-                                                print(player_name,"W O N !!!")
-                                        if computer_decision == 2:
-                                            print(computer_name,"W O N !!!")
-                                    if player_decision == 2:#2 long
-                                        p_2(player_decision,line)        
-                                        computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-                                        if computer_decision == 1:
-                                            print(computer_name,"W O N !!!")
-                                    if player_decision == 3:#1 long
-                                        p_1(player_decision,line)         
-                                        print(player_name,"W O N !!!")    
-                                elif computer_decision == 3:   #3 long            
-                                    c_1(computer_decision,line)       
-                                    player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
-                                    if player_decision == 1:#2 long
-                                        p_1(player_decision,line)   
-                                        computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
-                                        if computer_decision == 1:
-                                            print(computer_name,"W O N !!!")
-                                    elif player_decision == 2: 
-                                        print(player_name,"W O N !!!")
-                            elif player_decision == 2:  # 5 long
-                                p_2(player_decision,line)        
-                                computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+                                        c_2(computer_decision,line)         #3-->1
+                                        print(computer_name, "  W I N !!!")
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+
+                    # elif player_decision == 2:          #8 long
+                    #     p_2(player_decision,line)
+                    #     computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+                    #     if computer_decision == 1:
+                    #         c_1(computer_decision,line) #7 long
+                    #         player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
+                    #         if player_decision == 1:    #6 long
+                    #             p_1(player_decision,line)
+                    #             computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+                    #             if computer_decision   == 1:   #5 long
+                    #                 c_1(computer_decision,line)
+                    #                 player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
+                    #                 if player_decision == 1:
+                    #                     vc_5_4_1(player_decision,computer_name,line)
+                    #                 elif player_decision == 2:
+                    #                     vc_5_3_1(player_decision,computer_name,line)
+                    #                 elif player_decision == 3:
+                    #                     vc_5_2_1(player_decision,computer_name,line)
+                    #             elif computer_decision == 2:   #4 long
+                    #                 player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
+                    #                 if player_decision == 1:#3 long
+                    #                     p_1(player_decision,line)
+                    #                     computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+                    #                     if computer_decision == 1:#2 long
+                    #                         c_2(computer_decision,line)
+                    #                         player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
+                    #                         if player_decision == 1:
+                    #                             print(player_name,"W O N !!!")
+                    #                     if computer_decision == 2:
+                    #                         print(computer_name,"W O N !!!")
+                    #                 if player_decision == 2:#2 long
+                    #                     p_2(player_decision,line)        
+                    #                     computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+                    #                     if computer_decision == 1:
+                    #                         print(computer_name,"W O N !!!")
+                    #                 if player_decision == 3:#1 long
+                    #                     p_1(player_decision,line)         
+                    #                     print(player_name,"W O N !!!")    
+                    #             elif computer_decision == 3:   #3 long            
+                    #                 c_1(computer_decision,line)       
+                    #                 player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
+                    #                 if player_decision == 1:#2 long
+                    #                     p_1(player_decision,line)   
+                    #                     computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
+                    #                     if computer_decision == 1:
+                    #                         print(computer_name,"W O N !!!")
+                    #                 elif player_decision == 2: 
+                    #                     print(player_name,"W O N !!!")
+                    #         elif player_decision == 2:  # 5 long
+                    #             p_2(player_decision,line)        
+                    #             computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
                          
                                        
                                        
