@@ -394,6 +394,8 @@ def main():
 
 
 
+
+
                     elif player_decision == 2:          #8 long
                         p_2(player_decision,line)
                         computer_decision = int(input("\n" + computer_name + ",how many sticks do you want to remove ? " ))
