@@ -260,8 +260,7 @@ def main():
     if   player_decision == 1:              #15-->14 
         line = vc_15_14_13(player_decision,computer_name,line)
         line = from_13_to_victory(computer_name,player_name,line)       
-######################################################################################    
-    
+######################################################################################        
     
     if   player_decision == 2:              #15-->13
         p_2(player_decision,line)#13 long
