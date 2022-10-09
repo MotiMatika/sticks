@@ -4,3 +4,4 @@ def aa(x,y,z):
     z=2*z
     return x,y,z
 print(aa(1,2,3))
+print(1/3)
