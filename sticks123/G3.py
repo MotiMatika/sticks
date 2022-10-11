@@ -1,4 +1,4 @@
-from msilib.schema import ListView
+
 import random as rd
 def p_1(player_decision,line):#שחקן מוחק מקל בודד
     print("\n"+"This is the new line of the sticks")
