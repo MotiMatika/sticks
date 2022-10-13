@@ -10,3 +10,9 @@ print("The Roots are : ")
 print(mishva_ribuit(1,0,-9))
 
 
+# def cube(x):
+    
+#     volume =int(math.pow(x,3))
+#     return volume
+
+# print("The Volume of cube is ",cube(10),"cm^3")
