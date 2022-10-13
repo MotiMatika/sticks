@@ -60,38 +60,39 @@ def c_starts_from_3_to_1(player_name,computer_name,line):
 
 
 
-
 player_name   = "d"
 computer_name = "m"
 line = [1,2,3,4,5,6]    
 
 length = len(line)
 
-while length <= 3: 
+if  length <= 3: 
     turn = input("\nwho's turn ?")  
     if turn == "d":
         p_starts_from_3_to_1(player_name,computer_name,line) 
     elif turn == "m":
         c_starts_from_3_to_1(player_name,computer_name,line)
-
-turn = input("\nwho's turn ?")  
-if turn == "d":
-    player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
-    if player_decision == 3:                             
-        p_3(player_decision,line)
-        if  length <= 3:
-            c_starts_from_3_to_1(player_name,computer_name,line)
-        else:
-            print("3")
-    elif player_decision == 2:                             
-        p_2(player_decision,line)
-        if  length <= 3:
-            c_starts_from_3_to_1(player_name,computer_name,line)
-        else:
-            print("4")
-    elif player_decision == 1:                             
-        p_1(player_decision,line)
-        if  length <= 3:
+else:
+    turn = input("\nwho's turn ?")  
+    if turn == "d":
+        player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
+        if player_decision == 3:                             
+            p_3(player_decision,line)
+            if  length <= 3:
                 c_starts_from_3_to_1(player_name,computer_name,line)
-        else:
-            print("5")               
+            else:
+                print("3")
+        elif player_decision == 2:                             
+            p_2(player_decision,line)
+            if  length <= 3:
+                c_starts_from_3_to_1(player_name,computer_name,line)
+            else:
+                print("4")
+        elif player_decision == 1:                             
+            p_1(player_decision,line)
+            if  length <= 3:
+                c_starts_from_3_to_1(player_name,computer_name,line)
+            else:
+                print("5")               
+
+                 
