@@ -1,15 +1,17 @@
 import math
 
-def mishva_ribuit(a,b,c):
+def mishvaa_ribuit(a,b,c):
 
     x_1 = (-b+(math.sqrt(b*b - 4*a*c)))/(2*a)
     x_2 = (-b-(math.sqrt(b*b - 4*a*c)))/(2*a)
     return x_1,x_2
 
 print("The Roots are : ")
-print(mishva_ribuit(1,0,-9))
+print(mishvaa_ribuit(1,0,-9))
 
 
+# print("x_1 = ",x_1)
+# print("x_2 = ",x_2)
 # def cube(x):
     
 #     volume =int(math.pow(x,3))
