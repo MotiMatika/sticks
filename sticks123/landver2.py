@@ -64,6 +64,7 @@ player_name   = "d"
 computer_name = "m"
 line = [1,2,3,4,5,6]    
 
+print("\n",line)
 length = len(line)
 
 if  length <= 3: 
@@ -78,21 +79,22 @@ else:
         player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
         if player_decision == 3:                             
             p_3(player_decision,line)
-            if  length <= 3:
-                c_starts_from_3_to_1(player_name,computer_name,line)
-            else:
-                print("3")
-        elif player_decision == 2:                             
-            p_2(player_decision,line)
-            if  length <= 3:
-                c_starts_from_3_to_1(player_name,computer_name,line)
-            else:
-                print("4")
-        elif player_decision == 1:                             
-            p_1(player_decision,line)
-            if  length <= 3:
-                c_starts_from_3_to_1(player_name,computer_name,line)
-            else:
-                print("5")               
+        # print(length)
+        if  length <= 3:
+            c_starts_from_3_to_1(player_name,computer_name,line)
+        # else:
+        #         print("3")
+        # elif player_decision == 2:                             
+        #     p_2(player_decision,line)
+        #     if  length <= 3:
+        #         c_starts_from_3_to_1(player_name,computer_name,line)
+        #     else:
+        #         print("4")
+        # elif player_decision == 1:                             
+        #     p_1(player_decision,line)
+        #     if  length <= 3:
+        #         c_starts_from_3_to_1(player_name,computer_name,line)
+        #     else:
+        #         print("5")               
 
                  
