@@ -4,14 +4,16 @@ def p_1(player_decision,line):          #שחקן מוחק מקל בודד
         line.pop()
     length = len(line)
     print(line)
-    return line,length 
+    length = len(line)
+    return line , length 
 
 def p_2(player_decision,line):          #שחקן מוחק  2 מקלות 
     print("\n"+"This is the new line of the sticks")
     for i in range (player_decision):
         line.pop()
     print(line)
-    return line 
+    length = len(line)
+    return line , length
 
 def p_3(player_decision,line):          #שחקן מוחק  3 מקלות 
     print("\n"+"This is the new line of the sticks")
@@ -78,23 +80,17 @@ else:
     if turn == "d":
         player_decision = int(input("\n" + player_name + ",how many sticks do you want to remove ? " ))
         if player_decision == 3:                             
-            p_3(player_decision,line)
-        # print(length)
-        if  length <= 3:
-            c_starts_from_3_to_1(player_name,computer_name,line)
-        # else:
-        #         print("3")
-        # elif player_decision == 2:                             
-        #     p_2(player_decision,line)
-        #     if  length <= 3:
-        #         c_starts_from_3_to_1(player_name,computer_name,line)
-        #     else:
-        #         print("4")
-        # elif player_decision == 1:                             
-        #     p_1(player_decision,line)
-        #     if  length <= 3:
-        #         c_starts_from_3_to_1(player_name,computer_name,line)
-        #     else:
-        #         print("5")               
+            line,length = p_3(player_decision,line)   
+            if  length <= 3:
+                c_starts_from_3_to_1(player_name,computer_name,line)
+        elif player_decision == 2:                             
+            line,length = p_2(player_decision,line)
+            if  length <= 3:
+                c_starts_from_3_to_1(player_name,computer_name,line)
+        elif player_decision == 1:                             
+            line,length = p_1(player_decision,line)
+            if  length <= 3:
+                c_starts_from_3_to_1(player_name,computer_name,line)
+           
 
                  
